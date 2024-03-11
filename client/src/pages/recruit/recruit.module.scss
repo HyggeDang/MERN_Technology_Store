@@ -1,0 +1,266 @@
+@import "scss/mixin.scss";
+@import "scss/variables.scss";
+
+.main {
+    .recruit {
+        overflow: hidden;
+
+        &__intro {
+            margin: 80px;
+            margin-bottom: 50px;
+
+            &__head {
+                font-size: 10px;
+
+                h1 {
+                    font-size: 3.5em;
+                    text-transform: uppercase;
+                    color: $backgroundMain;
+                }
+
+                p {
+                    font-size: $fontSizeMain;
+                    text-align: justify;
+                    margin: 30px 0;
+                    line-height: 1.3;
+                }
+
+                div {
+                    .btnAnimation {
+                        @include buttonAnimation(18px, 3rem, 10rem, 60%, white, $backgroundMain, rgb(13, 173, 66));
+                    }
+                }
+            }
+
+            &__body {
+                img {
+                    border-radius: 600px;
+                    display: block;
+                }
+            }
+        }
+
+        &__benefits {
+            margin: 80px;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+
+            &__content {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                font-size: 10px;
+                padding: 20px;
+                background-color: $backgroundMain;
+                border-radius: 5px;
+                color: white;
+                box-shadow: 0 0 5px 2px $backgroundMain;
+
+                img {
+                    width: 100%;
+                    display: block;
+                    width: 100px;
+                    margin: 0 auto;
+                }
+
+                h1 {
+                    text-align: center;
+                    font-size: 2em;
+                    margin: 20px 0;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: $fontSizeMain;
+                    margin-top: auto;
+                }
+            }
+        }
+
+        &__slider {
+            margin: 50px 80px 80px;
+            padding: 30px;
+            position: relative;
+
+            .card {
+                border: 1px solid $backgroundMain;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                &__head {
+                    img {
+                        width: 100%;
+                        height: 200px;
+                        display: block;
+                    }
+                }
+
+                &__body {
+                    padding: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 10px;
+
+                    h1 {
+                        font-size: $fontSizeMain;
+                        text-transform: uppercase;
+                        color: red;
+                    }
+
+                    .des {
+                        margin: 15px 0;
+
+                        p {
+                            font-size: 18px;
+                        }
+
+                        p+p {
+                            margin-top: 15px;
+                        }
+                    }
+
+                    button {
+                        @include button(transparent, $backgroundMain, $fontSizeMain, 10px, 10px, 5px, 0.6s);
+                        @include buttonSkew($backgroundMain, -30px, 150%, 45deg, left);
+                        margin-right: auto;
+                        margin-top: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+@include responsiveMainLg__ {
+    .main {
+        .recruit {
+            &__intro {
+                margin: 60px;
+
+                &__head {
+                    font-size: 9px;
+                }
+            }
+
+            &__benefits {
+                margin: 60px;
+                margin-bottom: 0;
+            }
+
+            &__slider {
+                margin: 30px 60px 60px;
+                padding: 30px;
+            }
+        }
+
+    }
+}
+
+@include responsiveMainMd__ {
+    .main {
+        .recruit {
+            &__intro {
+                margin: 40px;
+
+                &__head {
+                    font-size: 9px;
+
+                    a {
+                        .btnAnimation {
+                            @include buttonAnimation(16px, 2.8rem, 8rem, 60%, white, $backgroundMain, rgb(13, 173, 66));
+                        }
+                    }
+                }
+            }
+
+            &__benefits {
+                margin: 40px;
+                margin-bottom: 0;
+            }
+
+            &__slider {
+                margin: 10px 40px 40px;
+                padding: 30px;
+            }
+        }
+
+    }
+}
+
+@include responsiveMainSm__ {
+    .main {
+        .recruit {
+            &__intro {
+                margin: 30px;
+
+                &__head {
+                    font-size: 8px;
+                }
+            }
+
+            &__benefits {
+                margin: 30px;
+                margin-bottom: 0;
+            }
+
+            &__slider {
+                margin: 0px 30px 30px;
+                padding: 30px;
+
+                .card {
+                    &__body {
+                        font-size: 9px;
+
+                        .des {
+                            p {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsiveMainXs__ {
+    .main {
+        .recruit {
+            &__intro {
+                margin: 15px;
+
+                &__head {
+                    p {
+                        margin: 20px 0;
+                    }
+                }
+            }
+
+            &__benefits {
+                margin: 15px;
+                margin-bottom: 0;
+            }
+
+            &__slider {
+                margin: 0px 15px 15px;
+                padding: 15px;
+
+                .card {
+                    &__body {
+                        font-size: 8px;
+
+                        .des {
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

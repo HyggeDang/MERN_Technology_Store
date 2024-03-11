@@ -1,0 +1,103 @@
+@import 'scss/mixin.scss';
+@import 'scss/variables.scss';
+
+
+.accountLayout {
+    .main {
+        margin: 80px;
+
+        .navInfo {
+            border: 1px solid $backgroundMain;
+            border-radius: 5px;
+            padding: 20px;
+
+            ul {
+                font-size: 10px;
+
+                li {
+                    font-size: $fontSizeMain;
+                    @include flexCenter();
+
+                    .infor {
+                        @include flexCenter();
+
+                        &__head {
+                            margin-right: 10px;
+
+                            img {
+                                display: block;
+                                width: 100%;
+                                width: 50px;
+                                border-radius: 5px;
+                            }
+                        }
+
+                        &__body {
+                            h1 {
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+
+                    a {
+                        @include flexCenter();
+                        border: 1px solid $backgroundMain;
+                        color: $backgroundMain;
+                        padding: 6px;
+                        border-radius: 5px;
+                        width: 100%;
+                        .icon {
+                            font-size: 20px;
+                            margin-right: 10px;
+                        }
+                        &:hover {
+                            background-color: $backgroundMain;
+                            color: white;
+                        }
+                    }
+                }
+
+                li+li {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+// responsive 
+@include responsiveMainLg__ {
+    .accountLayout {
+        .main {
+            margin: 60px;
+        }
+
+    }
+}
+@include responsiveMainMd__ {
+    .accountLayout {
+        .main {
+            margin: 40px;
+        }
+
+    }
+}
+@include responsiveMainSm__ {
+    .accountLayout {
+        .main {
+            margin: 30px;
+        }
+
+    }
+}
+@include responsiveMainXs__ {
+    .accountLayout {
+        .main {
+            margin: 15px;
+            .navInfo {
+                padding: 15px;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,167 @@
+@import 'scss/variables.scss';
+@import 'scss/mixin.scss';
+
+.main {
+    .productApp {
+        margin: 80px;
+        &__fillters {
+            border-radius: 5px;
+            padding: 15px;
+            border: 1px solid grey;
+            &__head {
+                font-size: 10px;
+                h1 {
+                    font-size: $fontSizeMain;
+                    border-radius: 5px;
+                    background-color: $backgroundMain;
+                    padding: 8px;
+                    color: white;
+                    text-transform: uppercase;
+                }
+            }
+            &__body {
+                margin: 15px;
+                section {
+                    font-size: 10px;
+                    h1 {
+                        font-size: $fontSizeMain;
+                        border-radius: 5px;
+                        background-color: $backgroundMain;
+                        padding: 8px;
+                        color: white;
+                        text-transform: uppercase;
+                    }
+                    ul {
+                        // margin-top: 20px;
+                        font-size: $fontSizeMain;
+                        li {
+                            margin-top: 15px;
+                            input {
+
+                            }
+                            label {
+                                margin-left: 8px;
+                            }
+                        }
+                    }
+
+                }
+                section+section {
+                    margin-top: 15px;
+                }
+            }
+        }
+        &__product {
+            display: flex;
+            a {
+                &:hover {
+                    color: black;
+                }
+            }
+            .productItem{
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                box-shadow: 0 0 5px 1px grey;
+                border-radius: 5px;
+                padding: 20px;
+                font-size: 10px;
+                cursor: pointer;
+                img {
+                    width: 100%;
+                    display: block;
+                    margin: 0 auto;
+                }
+                p{
+                    margin: 20px 0;
+                    font-size: 1.5em;
+                    font-weight: bold;
+                }
+                h1 { 
+                    font-size: 2em;
+                    margin-top: auto;
+                    color: red;
+                }
+
+            }
+            
+        }
+        .emptyProduct {
+            img {
+                height: 100%;
+            }
+            h1 {
+                color: white;
+                text-align: center;
+                text-transform: uppercase;
+                background-color: $backgroundMain;
+                padding: 8px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+
+// responsive 
+@include responsiveMainLg__ {
+    .main {
+        .productApp {
+            margin: 60px;
+            &__fillters {
+                &__head {
+                    font-size: 9px;
+                }
+                &__body {
+                    section {
+                        font-size: 9px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// responsive 
+@include responsiveMainMd__ {
+    .main {
+        .productApp {
+            margin: 40px;
+            &__fillters {
+                &__head {
+                    font-size: 8px;
+                }
+                &__body {
+                    section {
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsiveMainSm__ {
+    .main {
+        .productApp {
+            margin: 30px;
+            &__fillters {
+                display: none;
+            }
+        }
+    }
+}
+@include responsiveMainSm__ {
+    .main {
+        .productApp {
+            margin: 15px;
+            &__product { 
+                .productItem {
+                    img {
+                        width: 250px;
+                    }
+                }
+            }
+        }
+    }
+}

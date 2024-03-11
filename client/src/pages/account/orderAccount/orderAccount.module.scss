@@ -1,0 +1,208 @@
+@import 'scss/mixin.scss';
+@import 'scss/variables.scss';
+
+.main {
+    padding: 20px;
+    border: 1px solid $backgroundMain;
+    border-radius: 5px;
+
+    .orderAccount {
+        &__head {
+            font-size: 10px;
+            @include flexCenter();
+            justify-content: center;
+
+            h1 {
+                font-size: 2.3em;
+                text-transform: uppercase;
+                color: $backgroundMain;
+                text-align: center;
+                padding: 10px;
+                border: 1px solid $backgroundMain;
+                border-radius: 5px;
+            }
+        }
+
+        &__body {
+            margin-top: 20px;
+
+            .inforOrder {
+                border-radius: 5px;
+
+                &__head {
+                    border-radius: 5px;
+                    font-size: 10px;
+                    @include flexCenter();
+
+                    h1 {
+                        background-color: $backgroundMain;
+                        color: white;
+                        border-radius: 5px;
+                        padding: 10px;
+                        font-size: $fontSizeMain;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &__body {
+                    border-radius: 5px;
+                    padding: 10px;
+                    font-size: 10px;
+                    border: 1px solid green;
+
+                    * {
+                        font-size: $fontSizeMain;
+                    }
+
+                    h1 {
+                        color: red;
+                    }
+
+                    p+p {
+                        margin-top: 10px;
+                    }
+
+                    img {
+                        display: block;
+                        width: 80px;
+                        margin-bottom: 10px;
+                        border-radius: 5px;
+                    }
+
+                    .price {
+                        color: red;
+                        font-weight: bold;
+                    }
+
+                    .finish,
+                    a {
+                        display: inline-block;
+                        background-color: $backgroundMain;
+                        color: white;
+                        padding: 5px 10px;
+                        margin-top: 10px;
+                        border-radius: 3px;
+                    }
+
+                    a {
+                        background-color: blue;
+                        margin-left: 10px;
+
+                        &:hover {
+                            background-color: $backgroundMain;
+                        }
+                    }
+
+                }
+            }
+
+            .inforOrder+.inforOrder {
+                margin-top: 20px;
+            }
+
+        }
+
+        &__empty {
+            text-align: center;
+            font-size: 10px;
+            overflow: hidden;
+
+            img {
+                display: block;
+                width: 400px;
+                margin: 0 auto;
+            }
+
+            p {
+                font-size: 2.5em;
+                text-transform: uppercase;
+                color: $backgroundMain;
+                font-weight: bold;
+            }
+
+            a {
+                font-size: $fontSizeMain;
+                @include flexCenter();
+                justify-content: center;
+                margin-top: 30px;
+
+                button {
+                    @include flexCenter();
+                    @include button($backgroundMain, white, inherit, 10px, 20px, 5px, 0.3s);
+                    font-weight: bold;
+
+                    .icon {
+                        font-size: 25px;
+                        margin-right: 8px;
+                    }
+
+                    &:hover {
+                        background-color: rgb(177, 13, 13);
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// responsive
+@include responsiveMainMd__ {
+    .main {
+        .orderAccount {
+            &__empty {
+                font-size: 8px;
+            }
+        }
+    }
+}
+
+@include responsiveMainSm__ {
+    .main {
+        .orderAccount {
+            &__head {
+                font-size: 9px;
+            }
+
+            &__body {
+                .inforOrder {
+                    &__head {
+                        font-size: 9px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsiveMainXs__ {
+    .main {
+        padding: 15px;
+
+        .orderAccount {
+            &__head {
+                font-size: 8px;
+            }
+
+            &__body {
+                .inforOrder {
+                    &__head {
+                        font-size: 8px;
+                    }
+                }
+            }
+
+            &__empty {
+                font-size: 7px;
+
+                a {
+                    margin-top: 15px;
+
+                    button {
+                        @include button($backgroundMain, white, inherit, 8px, 16px, 5px, 0.3s);
+                    }
+                }
+            }
+        }
+    }
+}
