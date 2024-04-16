@@ -48,11 +48,11 @@ const Footer = () => {
         { des: t('information.branch.sg') },
     ];
     const footerContact = [
-        { icon: FaFacebookSquare, path: 'https://www.facebook.com/nguyenhuunhan.frontend/' },
+        { icon: FaFacebookSquare, path: 'https://www.facebook.com/hiepdang.fb/' },
         { icon: FaPhoneSquareAlt, path: 'tel: 0342040063' },
-        { icon: FaInstagramSquare, path: 'https://www.instagram.com/nhan.coder.1912/' },
-        { icon: FaYoutube, path: 'https://www.youtube.com/@NguyenHuuNhan1010' },
-        { icon: MdEmail, path: 'mailto: nguyenhuunhan.coder@gmail.com' },
+        { icon: FaInstagramSquare, path: 'https://www.instagram.com/losojosdebh/' },
+        { icon: FaYoutube, path: 'https://www.youtube.com/@hiepdang.yt' },
+        { icon: MdEmail, path: 'mailto: thihiepdang.bh@gmail.com' },
     ];
     return (
         <footer className={clsx(style.footer)}>

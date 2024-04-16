@@ -10,12 +10,12 @@ import { useEffect, useState, useRef } from 'react';
 
 // Variables Global
 const datasocialNetwork = [
-    { icon: images.socialNetWork.phone, path: 'tel: 0342040063'},
-    { icon: images.socialNetWork.fB, path: 'https://www.facebook.com/nguyenhuunhan.frontend/' },
-    { icon: images.socialNetWork.mess, path: 'https://www.facebook.com/nguyenhuunhan.frontend/' },
-    { icon: images.socialNetWork.map, path: 'https://goo.gl/maps/5NK6ywM1q8GxEmzq8'},
-    { icon: images.socialNetWork.youtube, path: 'https://www.youtube.com/@NguyenHuuNhan1010' },
-    { icon: images.socialNetWork.email, path: 'mailto: nguyenhuunhan.coder@gmail.com' },
+    { icon: images.socialNetWork.phone, path: 'tel: 0369880010'},
+    { icon: images.socialNetWork.fB, path: 'https://www.facebook.com/hiepdang.fb/' },
+    { icon: images.socialNetWork.mess, path: 'https://www.facebook.com/hiepdang.fb/' },
+    { icon: images.socialNetWork.map, path: 'https://maps.app.goo.gl/8ycWAxnLpDP9MLmRA'}, 
+    { icon: images.socialNetWork.youtube, path: 'https://www.youtube.com/@hiepdang.yt' },
+    { icon: images.socialNetWork.email, path: 'mailto: thihiepdang.bh@gmail.com' },
 ];
 
 const SelectSpeed = () => {

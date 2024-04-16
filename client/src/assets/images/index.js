@@ -10,7 +10,7 @@ const images = {
         cart: require('./header/cart.png'),
     },
     footer: {
-        logon: require('./footer/logon.png'),
+        logon: require('./footer/logon.jpg'), 
     },
     signin: {
         login: require('./signin/login.png'),

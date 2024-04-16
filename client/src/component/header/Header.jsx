@@ -370,7 +370,7 @@ localStorage.removeItem("userAuth");
                             </div>
                             <div className={clsx(style.hotline__body)}>
                                 <p>Hotline</p>
-                                <p>0342040063</p>
+                                <p>0369880010</p>
                             </div>
                         </Link>
                         <Link to="/cart" className={clsx(style.cart)}>

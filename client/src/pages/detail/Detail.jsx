@@ -240,7 +240,7 @@ const Detail = () => {
                     <div className={clsx(style.detail__policy__head)}>
                       <img src={images.footer.logon} alt="img" />
                       <section>
-                        <span>Công ty cổ phần thương mại dịch vụ Hữu Nhân</span>
+                        <span>Công ty cổ phần thương mại dịch vụ Tech Store</span>
                         <img src={images.detail.check} alt="img" />
                       </section>
                     </div>
